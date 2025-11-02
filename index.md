@@ -1,45 +1,38 @@
 # Titanic Survival Analysis
 
-**Author:** Brandon 
+**Author:** Brandon Jean  
 **Date:** November 2, 2025  
 
 ---
 
 ## Project Overview
 
-This project explores the Titanic dataset to see which factors influenced passenger survival. It follows the same ML workflow used in your first project: inspect → explore → clean → engineer features → select X/y → split.
+This project analyzes the Titanic dataset using Python and Seaborn to explore which factors influenced passenger survival. It walks through data inspection, visualization, feature engineering, and model preparation.
 
 ---
 
 ## Goals
-- Inspect and understand the dataset
-- Handle missing values (`age`, `embark_town`, `embarked`)
-- Visualize survival by class and gender
-- Create `family_size` feature
-- Encode categorical data for modeling
-- Compare basic vs. stratified train/test split
+
+- Understand the structure of the dataset  
+- Identify and handle missing values  
+- Visualize relationships between features  
+- Engineer useful features for modeling  
+- Define input features (X) and the target variable (y)  
+- Perform train/test splits with stratification  
 
 ---
 
-## Key Steps
+## Dataset
 
-1. **Import & Inspect** – load Titanic, view shape, info, head, missing values, and correlations.  
-2. **Explore** – scatter plots, histograms, and count plots (class vs survived).  
-3. **Clean** – fill missing ages with median, fill embark values with mode, drop `deck` (too many NaNs).  
-4. **Feature Engineering** – `family_size = sibsp + parch + 1`, encode `sex`, encode `embarked`, convert `alone` to int.  
-5. **Feature Selection** –  
-   - **X:** `age`, `fare`, `pclass`, `sex`, `family_size`  
-   - **y:** `survived`  
-6. **Splitting** – used `train_test_split` and `StratifiedShuffleSplit` to keep survival ratios similar in train and test.
+The Titanic dataset includes **891 passengers** with features like:
 
----
+- `survived` (0 = No, 1 = Yes)  
+- `pclass` (passenger class)  
+- `sex`, `age`, `fare`  
+- `sibsp` (siblings/spouses aboard)  
+- `parch` (parents/children aboard)  
+- `embarked` (port of embarkation)  
 
-## Files (in main project repo)
+Some columns, like `age` and `deck`, contain missing values that were cleaned using median or
 
-- `notebooks/project02/ml02_brandonjean.ipynb`
-- `notebooks/project02/titanic.csv`
-- Repo: https://github.com/brandonjbbb/applied-ml-brandon
 
----
-
-Made by **Brandon** 🟣
